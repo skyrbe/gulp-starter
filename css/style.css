@@ -1,0 +1,328 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #4f91f8;
+  height: 100vh;
+  margin: 0;
+  min-height: 100vw; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container .book-now-button {
+    margin: 0;
+    background: #FFF;
+    outline: none;
+    border: 0;
+    width: 240px;
+    height: 70px;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 4px 6px 10px 8px rgba(0, 0, 0, 0.05);
+    border: 0;
+    display: flex;
+    position: relative;
+    align-items: center; }
+    .container .book-now-button .pre-booking {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      top: 0;
+      left: 0;
+      transform: translateY(0);
+      transition: transform ease-in-out 0.3s; }
+    .container .book-now-button .post-booking {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      top: 100%;
+      left: 0;
+      background: #242529;
+      transform: translateY(0);
+      transition: transform ease-in-out 0.3s;
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFF;
+      justify-content: center; }
+    .container .book-now-button.success .pre-booking, .container .book-now-button.success .post-booking {
+      transform: translateY(-100%); }
+    .container .book-now-button .book-now-button-text {
+      font-size: 18px;
+      font-weight: 700;
+      display: flex;
+      width: 69%;
+      justify-content: center; }
+    .container .book-now-button .icon-container {
+      background-color: #a5c8fc;
+      width: 31%;
+      height: 100%;
+      position: relative;
+      transform: scale(1.2);
+      transition: width ease 1s, transform ease 0.5s; }
+      .container .book-now-button .icon-container:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #dce8fa;
+        height: 15px;
+        left: 0; }
+      .container .book-now-button .icon-container .cot {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 20px;
+        width: 46px; }
+        .container .book-now-button .icon-container .cot .cot-head {
+          background-color: #ccc;
+          width: 36px;
+          height: 14px;
+          left: 5px;
+          position: relative;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
+          .container .book-now-button .icon-container .cot .cot-head:before, .container .book-now-button .icon-container .cot .cot-head:after {
+            content: '';
+            width: 11px;
+            height: 6px;
+            position: absolute;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            left: 5px;
+            bottom: 0;
+            background-color: #FFF; }
+          .container .book-now-button .icon-container .cot .cot-head:after {
+            left: auto;
+            right: 5px; }
+        .container .book-now-button .icon-container .cot .cot-bed {
+          background-color: #f1f1f1;
+          width: 46px;
+          height: 9px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
+        .container .book-now-button .icon-container .cot .cot-base {
+          background-color: #696969;
+          width: 46px;
+          height: 5px;
+          position: relative; }
+          .container .book-now-button .icon-container .cot .cot-base:before, .container .book-now-button .icon-container .cot .cot-base:after {
+            content: '';
+            width: 4px;
+            height: 6px;
+            background-color: #696969;
+            position: absolute;
+            top: 5px;
+            left: 4px; }
+          .container .book-now-button .icon-container .cot .cot-base:after {
+            left: auto;
+            right: 4px; }
+    .container .book-now-button .trolley {
+      position: absolute;
+      transform: translateX(-20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      bottom: 15px;
+      filter: blur(0.8px);
+      transition: transform ease-in-out 0.5s, filter ease-in-out 0.5s;
+      transition-delay: 1s; }
+      .container .book-now-button .trolley .trolley-handle {
+        width: 6px;
+        height: 7px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border: 2px solid #2a292a;
+        position: relative;
+        margin-bottom: -2px; }
+      .container .book-now-button .trolley .trolley-body {
+        width: 16px;
+        height: 18px;
+        background: #2a292a;
+        border-radius: 2px;
+        position: relative; }
+        .container .book-now-button .trolley .trolley-body .trolley-sticker-green {
+          background-color: #61ddb2;
+          width: 6px;
+          height: 3px;
+          position: absolute;
+          top: 3px;
+          transform: rotate(-15deg);
+          left: 3px; }
+        .container .book-now-button .trolley .trolley-body .trolley-sticker-red {
+          background: #d77c66;
+          width: 3px;
+          height: 3px;
+          transform: rotate(-16deg);
+          position: absolute;
+          bottom: 3px;
+          left: 4px; }
+        .container .book-now-button .trolley .trolley-body .trolley-sticker-yellow {
+          background-color: #fee6c4;
+          width: 2px;
+          height: 3px;
+          transform: rotate(-70deg);
+          position: absolute;
+          top: 7px;
+          right: 3px;
+          border-radius: 50%; }
+      .container .book-now-button .trolley .trolley-wheels {
+        display: flex; }
+        .container .book-now-button .trolley .trolley-wheels .trolley-wheel-left, .container .book-now-button .trolley .trolley-wheels .trolley-wheel-right {
+          background: #2a292a;
+          position: relative;
+          width: 4px;
+          height: 4px;
+          right: 2px;
+          border-radius: 50%;
+          margin-top: -2px; }
+        .container .book-now-button .trolley .trolley-wheels .trolley-wheel-right {
+          left: 2px;
+          right: auto; }
+    .container .book-now-button .suitcase {
+      position: absolute;
+      transform: translateX(242px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      bottom: 15px;
+      filter: blur(0.8px);
+      transition: transform ease-in-out 0.5s, filter ease-in-out 0.5s;
+      transition-delay: 0.5s; }
+      .container .book-now-button .suitcase .suitcase-handle {
+        width: 6px;
+        height: 2px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border: 2px solid #2a292a;
+        position: relative;
+        margin-bottom: -2px; }
+      .container .book-now-button .suitcase .suitcase-body {
+        width: 20px;
+        height: 13px;
+        background: #2a292a;
+        border-radius: 2px;
+        position: relative; }
+        .container .book-now-button .suitcase .suitcase-body .suitcase-sticker-left {
+          background-color: #61ddb2;
+          width: 5px;
+          height: 7px;
+          position: absolute;
+          top: 3px;
+          left: 3px; }
+        .container .book-now-button .suitcase .suitcase-body .suitcase-sticker-right {
+          background-color: #fee6c4;
+          width: 3px;
+          height: 5px;
+          transform: rotate(-36deg);
+          position: absolute;
+          top: 1px;
+          right: 4px;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px; }
+          .container .book-now-button .suitcase .suitcase-body .suitcase-sticker-right:after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            border-radius: 50%;
+            height: 1px;
+            background-color: #2a292a;
+            left: 1px;
+            top: 1px; }
+    .container .book-now-button.active .icon-container {
+      width: 100%; }
+      .container .book-now-button.active .icon-container.begin-scale {
+        transform: scale(0.8); }
+    .container .book-now-button.active .trolley {
+      transform: translateX(82px);
+      filter: blur(0px); }
+    .container .book-now-button.active .suitcase {
+      transform: translateX(133px);
+      filter: blur(0px); }
+    .container .book-now-button.active .book-now-button-text {
+      display: none; }
+
+@keyframes trolley-move {
+  0% {
+    filter: blur(0.8px); }
+  70% {
+    filter: blur(0.3px); }
+  100% {
+    filter: blur(0px); } }
+
+.wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #FFF;
+  transform: scale(7.5);
+  opacity: 0;
+  transition: all ease 0.5s;
+  transition-delay: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .wall:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background: #242529;
+    bottom: 0; }
+  .wall.active {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><rect x="102px" y="8px" width="37px" height="55px" fill="black"/></svg>') 0/100% 100%, linear-gradient(#fff, #fff);
+    -webkit-mask-composite: destination-out;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" preserveAspectRatio="none"><polygon points="20,20 20,180 180,100 " fill="black"/></svg>') 0/100% 100%, linear-gradient(#fff, #fff);
+    mask-composite: exclude; }
+  .wall.door-closed {
+    -webkit-mask-composite: unset; }
+  .wall .door {
+    background: #cccacc;
+    width: 37px;
+    height: 55px; }
+    .wall .door.interactive-door {
+      transform-origin: left;
+      transition: transform ease 0.5s; }
+      .wall .door.interactive-door.open {
+        transform: perspective(300px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-123deg); }
+    .wall .door .door-pin-hole {
+      background: #FFF;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      position: relative;
+      margin: auto;
+      top: 10px; }
+    .wall .door .door-status {
+      background: #4f4e4f;
+      width: 10px;
+      height: 3px;
+      margin: auto;
+      top: 13px;
+      position: relative;
+      border: 2px solid #929092; }
+    .wall .door .door-handle {
+      background: #928f92;
+      width: 4px;
+      height: 11px;
+      position: relative;
+      top: 13px;
+      left: 31px;
+      border-radius: 25px; }
+      .wall .door .door-handle .door-knob {
+        background: #4d4c4e;
+        width: 8px;
+        height: 2px;
+        position: relative;
+        top: 4px;
+        right: 5px;
+        border-radius: 3px; }
